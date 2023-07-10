@@ -95,3 +95,11 @@ The following is the relevant directory of our forked project
 │ ├─store                               fork from https://github.com/sei-protocol/sei-chain
 └───tokenfactory                        fork from https://github.com/sei-protocol/sei-chain
 ```
+<div align="center">
+  <h4 align="center">
+    Thanks for your contribution
+  </h4>
+  <a href="https://github.com/fibonacci-chain/core-protocol/issues">
+    <img src="https://contrib.rocks/image?repo=fibonacci-chain/core-protocol" />
+  </a>
+</div>
