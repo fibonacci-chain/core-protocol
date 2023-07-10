@@ -60,9 +60,9 @@ Developers, traders, and users can all connect to Fibonacci Chain as ecosystem p
 
 文件状态描述:
 
-- ✅ Fork，无任何修改
-- 🟥 Fork，文件内有部分内容修改
-- ❌ Fork 后，有代码改动
+- ✅ Fork，文件夹内无任何修改
+- 🟥 Fork，文件夹内有部分内容修改
+- ❌ Fork，有代码改动
 - 🟢 无需审计
 
 ```
@@ -78,29 +78,46 @@ Developers, traders, and users can all connect to Fibonacci Chain as ecosystem p
 │   │   ├── ante2.go                            ❌ Fork 后，有代码改动 
 │   │   └── ante2_test.go                       ❌ Fork 后，有代码改动 
 │   ├── antedecorators                      ✅ 整个目录fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/app/antedecorators
-│   ├── app.go                              🟥 Fork，文件内有部分内容修改
-│   ├── app_test.go                         🟥 Fork，文件内有部分内容修改
-│   ├── apptesting                          🟥 Fork，文件内有部分内容修改
-│   │   └── test_suite.go                   🟥 Fork，文件内有部分内容修改
+│   ├── app.go                              ❌ Fork，文件内有部分内容修改
+│   ├── app_test.go                         ❌ Fork，文件内有部分内容修改
+│   ├── apptesting                          🟥 Fork，文件夹内有部分内容修改
+│   │   └── test_suite.go                   ❌ Fork，文件内有部分内容修改
 │   ├── const.go                            🟢 无需审计，无任何修改
 │   ├── encoding.go                         🟢 无需审计，无任何修改
 │   ├── export.go                           🟢 无需审计，无任何修改
 │   ├── genesis.go                          🟢 无需审计，无任何修改
 │   ├── params                              🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/app/params , 但部分内容修改
-│   │   ├── amino.go                            🟥 Fork，文件内有部分内容修改
-│   │   ├── config.go                           🟥 Fork，文件内有部分内容修改
-│   │   ├── doc.go                              🟥 Fork，文件内有部分内容修改
-│   │   ├── encoding.go                         🟥 Fork，文件内有部分内容修改
-│   │   └── proto.go                            🟥 Fork，文件内有部分内容修改
+│   │   ├── amino.go                            ❌ Fork，文件内有部分内容修改
+│   │   ├── config.go                           ❌ Fork，文件内有部分内容修改
+│   │   ├── doc.go                              ❌ Fork，文件内有部分内容修改
+│   │   ├── encoding.go                         ❌ Fork，文件内有部分内容修改
+│   │   └── proto.go                            ❌ Fork，文件内有部分内容修改
 │   ├── test_helpers.go                     🟢 无需审计，无任何修改
 │   ├── upgrade_test.go                     🟢 无需审计，无任何修改
 │   ├── upgrades.go                         🟢 无需审计，无任何修改
 │   └── utils.go                            🟢 无需审计，无任何修改
-├── client                              ❌ Fork 后，有代码改动
+├── client                              🟥 Fork 后，有代码改动      
+│   ├── crypto                              🟥 Fork，文件内有部分内容修改
+│   │   ├── armor.go                            ❌ Fork，文件内有部分内容修改
+│   │   ├── keys                                🟥 Fork，文件内有部分内容修改
+│   │   │ └── bcrypt                                ✅ Fork，无任何修改 https://github.com/golang/crypto/tree/master/bcrypt
+│   │   │     ├── base64.go                         ✅ Fork，无任何修改
+│   │   │     └── bcrypt.go                         ✅ Fork，无任何修改
+│   │   └── xsalsa20symmetric               🟥 Fork，文件内有部分内容修改
+│   │     ├── symmetric.go                      ❌ Fork，文件内有部分内容修改
+│   │     └── symmetric_test.go                 ❌ Fork，文件内有部分内容修改
+│   └── keys                                🟥 Fork，文件内有部分内容修改
+│     ├── add.go                                ❌ Fork，文件内有部分内容修改
+│     ├── codec.go                              ❌ Fork，文件内有部分内容修改
+│     ├── codec_test.go                         ❌ Fork，文件内有部分内容修改
+│     ├── export_evm.go                         ❌ Fork，文件内有部分内容修改
+│     ├── import_evm.go                         ❌ Fork，文件内有部分内容修改
+│     ├── root.go                               ❌ Fork，文件内有部分内容修改
+│     └── utils.go                              ❌ Fork，文件内有部分内容修改
 ├── cmd                                 🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/cmd，有代码改动
 │   └── fbchaind                            🟢 无需审计
-│       ├── cmd                             🟥 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/cmd/seid/cmd 内有部分内容修改
-│       └── main.go                     ❌ Fork 后，有代码改动
+│       ├── cmd                                 🟥 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/cmd/seid/cmd 内有部分内容修改
+│       └── main.go                             ❌ Fork 后，有代码改动
 ├── codecov.yml                         🟢 无需审计: 用于配置文件
 ├── config.yml                          🟢 无需审计: 用于配置文件
 ├── crypto                              ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/crypto
