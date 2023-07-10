@@ -55,8 +55,8 @@ Developers, traders, and users can all connect to Fibonacci Chain as ecosystem p
 * Wasmd fork from:         https://github.com/sei-protocol/sei-wasmd/releases/tag/v0.0.2
 * Ibc-go/v3  fork from:     https://github.com/sei-protocol/sei-ibc-go/releases/tag/v3.1.0
 * Iavl fork from:                https://github.com/sei-protocol/sei-iavl/releases/tag/v0.1.4
-* Tm-db for from:            https://github.com/sei-protocol/tm-db/releases/tag/v0.0.4
-
+* Tm-db fork from:            https://github.com/sei-protocol/tm-db/releases/tag/v0.0.4
+* Ethermint fork from: https://github.com/evmos/ethermint/releases/tag/v0.22.0
 ```text
 The following is the relevant directory of our forked project
 
