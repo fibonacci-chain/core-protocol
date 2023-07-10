@@ -57,44 +57,85 @@ Developers, traders, and users can all connect to Fibonacci Chain as ecosystem p
 * Iavl fork from:                https://github.com/sei-protocol/sei-iavl/releases/tag/v0.1.4
 * Tm-db fork from:            https://github.com/sei-protocol/tm-db/releases/tag/v0.0.4
 * Ethermint fork from: https://github.com/evmos/ethermint/releases/tag/v0.22.0
-```text
-The following is the relevant directory of our forked project
 
-├─aclmapping                            fork from https://github.com/sei-protocol/sei-chain
-├─app                                   [x]
-├─client                                [x]
-├─cmd                                   [x]
-├─crypto                                fork from https://github.com/evmos/ethermint
-├─docker                                fork from https://github.com/evmos/ethermint
-├─docs                                  fork from https://github.com/evmos/ethermint
-├─encoding                              fork from https://github.com/evmos/ethermint
-├─ethereum                              fork from https://github.com/evmos/ethermint
-├─indexer                               fork from https://github.com/evmos/ethermint
-├─integration_test                      [x]
-├─loadtest                              [x]
-├─parallelization                       [x]
-├─proto                                 fork from https://github.com/evmos/ethermint
-├─rpc                                   [x]
-├─scripts                               [x]
-├─server                                fork from https://github.com/evmos/ethermint
-├─store                                 [x]
-├─sync                                  [x]
-├─target                                [x]
-├─tests                                 [x]
-├─testutil                              [x]
-├─types                                 [x]
-├─utils                                 [x]
-├─wasmbinding                           fork from https://github.com/sei-protocol/sei-chain     
-├─x
-│ ├─dex                                 [x]
-│ ├─epoch                               fork from https://github.com/sei-protocol/sei-chain
-│ ├─evm                                 fork from https://github.com/evmos/ethermint
-│ ├─feemarket                           form from https://github.com/evmos/ethermint
-│ ├─mint                                [x]
-│ ├─oracle                              fork from https://github.com/sei-protocol/sei-chain
-│ ├─store                               fork from https://github.com/sei-protocol/sei-chain
-└───tokenfactory                        fork from https://github.com/sei-protocol/sei-chain
+文件状态描述:
+
+- ✅ Fork，无任何修改
+- 🟥 Fork，文件内有部分内容修改
+- ❌ Fork 后，有代码改动
+- 🟢 无需审计
+
 ```
+.
+├── LICENSE.md                          🟢 无需审计: 用于版权说明
+├── Makefile                            🟢 无需审计: 用于编译
+├── README.md                           🟢 无需审计: 用于项目描述
+├── aclmapping                          ✅ 整个目录fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/aclmapping
+├── app                                 🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/app , 但部分内容修改
+│   ├── abci.go                             ❌ Fork 后，有代码改动 
+│   ├── ante                                ✅ Fork，无任何修改 https://github.com/evmos/ethermint/tree/v0.22.0/app/ante 
+│   ├── ante2                               🟧自己添加
+│   │   ├── ante2.go                            ❌ Fork 后，有代码改动 
+│   │   └── ante2_test.go                       ❌ Fork 后，有代码改动 
+│   ├── antedecorators                      ✅ 整个目录fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/app/antedecorators
+│   ├── app.go                              🟥 Fork，文件内有部分内容修改
+│   ├── app_test.go                         🟥 Fork，文件内有部分内容修改
+│   ├── apptesting                          🟥 Fork，文件内有部分内容修改
+│   │   └── test_suite.go                   🟥 Fork，文件内有部分内容修改
+│   ├── const.go                            🟢 无需审计，无任何修改
+│   ├── encoding.go                         🟢 无需审计，无任何修改
+│   ├── export.go                           🟢 无需审计，无任何修改
+│   ├── genesis.go                          🟢 无需审计，无任何修改
+│   ├── params                              🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/app/params , 但部分内容修改
+│   │   ├── amino.go                            🟥 Fork，文件内有部分内容修改
+│   │   ├── config.go                           🟥 Fork，文件内有部分内容修改
+│   │   ├── doc.go                              🟥 Fork，文件内有部分内容修改
+│   │   ├── encoding.go                         🟥 Fork，文件内有部分内容修改
+│   │   └── proto.go                            🟥 Fork，文件内有部分内容修改
+│   ├── test_helpers.go                     🟢 无需审计，无任何修改
+│   ├── upgrade_test.go                     🟢 无需审计，无任何修改
+│   ├── upgrades.go                         🟢 无需审计，无任何修改
+│   └── utils.go                            🟢 无需审计，无任何修改
+├── client                              ❌ Fork 后，有代码改动
+├── cmd                                 🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/cmd，有代码改动
+│   └── fbchaind                            🟢 无需审计
+│       ├── cmd                             🟥 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/cmd/seid/cmd 内有部分内容修改
+│       └── main.go                     ❌ Fork 后，有代码改动
+├── codecov.yml                         🟢 无需审计: 用于配置文件
+├── config.yml                          🟢 无需审计: 用于配置文件
+├── crypto                              ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/crypto
+├── docker                              ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/docker
+├── docs                                ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/docs
+├── encoding                            ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/encoding
+├── ethereum                            ✅ 整个目录fork: from https://github.com/fibonacci-chain/core-protocol/tree/main/ethereum/eip712
+├── go.mod                              🟢 依赖文件，无需审计
+├── go.sum                              🟢 依赖文件，无需审计
+├── indexer                             ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/indexer
+├── integration_test                    🟢 测试文件，无需审计
+├── loadtest                            🟢 测试文件，无需审计
+├── parallelization                     🟢 测试文件，无需审计
+├── proto                               ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/proto
+├── rpc                                 ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/rpc
+├── scripts                             ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/scripts
+├── server                              ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/server
+├── store                               ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/store
+├── sync                                ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/sync
+├── target                              🟢 无需审计，配置文件夹
+├── tests                               🟢 无需审计，测试文件夹
+├── testutil                            🟢 无需审计，测试文件夹
+├── wasmbinding                         ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/wasmbinding
+└── x                                   🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x , 但部分内容修改, 添加evm模块
+    ├── README.md                       🟢 无需审计，说明文件
+    ├── dex                             ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x/dex
+    ├── evm                             ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/x/evm
+    ├── feemarket                       ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/x/feemarket
+    ├── mint                            ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x/mint
+    ├── oracle                          ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x/oracle
+    ├── store                           ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x/store
+    └── tokenfactory                    ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x/tokenfactory
+
+```
+
 <div align="center">
   <h4 align="center">
     Thanks for your contribution
