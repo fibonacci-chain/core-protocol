@@ -70,14 +70,14 @@ Developers, traders, and users can all connect to Fibonacci Chain as ecosystem p
 ├── LICENSE.md                          🟢 无需审计: 用于版权说明
 ├── Makefile                            🟢 无需审计: 用于编译
 ├── README.md                           🟢 无需审计: 用于项目描述
-├── aclmapping                          ✅ 整个目录fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/aclmapping
-├── app                                 🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/app , 但部分内容修改
+├── aclmapping                          ✅ 整个目录fork https://github.com/sei-protocol/sei-chain/tree/3.0.4/aclmapping
+├── app                                 🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/3.0.4/app , 但部分内容修改
 │   ├── abci.go                             ❌ Fork 后，有代码改动 
 │   ├── ante                                ✅ Fork，无任何修改 https://github.com/evmos/ethermint/tree/v0.22.0/app/ante 
 │   ├── ante2                               🟧自己添加
 │   │   ├── ante2.go                            ❌ Fork 后，有代码改动 
 │   │   └── ante2_test.go                       ❌ Fork 后，有代码改动 
-│   ├── antedecorators                      ✅ 整个目录fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/app/antedecorators
+│   ├── antedecorators                      ✅ 整个目录fork https://github.com/sei-protocol/sei-chain/tree/3.0.4/app/antedecorators
 │   ├── app.go                              ❌ Fork，文件内有部分内容修改
 │   ├── app_test.go                         ❌ Fork，文件内有部分内容修改
 │   ├── apptesting                          🟥 Fork，文件夹内有部分内容修改
@@ -86,7 +86,7 @@ Developers, traders, and users can all connect to Fibonacci Chain as ecosystem p
 │   ├── encoding.go                         🟢 无需审计，无任何修改
 │   ├── export.go                           🟢 无需审计，无任何修改
 │   ├── genesis.go                          🟢 无需审计，无任何修改
-│   ├── params                              🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/app/params , 但部分内容修改
+│   ├── params                              🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/3.0.4/app/params , 但部分内容修改
 │   │   ├── amino.go                            ❌ Fork，文件内有部分内容修改
 │   │   ├── config.go                           ❌ Fork，文件内有部分内容修改
 │   │   ├── doc.go                              ❌ Fork，文件内有部分内容修改
@@ -114,15 +114,15 @@ Developers, traders, and users can all connect to Fibonacci Chain as ecosystem p
 │     ├── import_evm.go                         ❌ Fork，文件内有部分内容修改
 │     ├── root.go                               ❌ Fork，文件内有部分内容修改
 │     └── utils.go                              ❌ Fork，文件内有部分内容修改
-├── cmd                                 🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/cmd，有代码改动
+├── cmd                                 🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/3.0.4/cmd，有代码改动
 │   └── fbchaind                            🟢 无需审计
-│       ├── cmd                                 🟥 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/cmd/seid/cmd 内有部分内容修改
+│       ├── cmd                                 🟥 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/cmd/seid/cmd 内有部分内容修改
 │       └── main.go                             ❌ Fork 后，有代码改动
 ├── codecov.yml                         🟢 无需审计: 用于配置文件
 ├── config.yml                          🟢 无需审计: 用于配置文件
 ├── crypto                              ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/crypto
-├── docker                              ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/docker
-├── docs                                ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/docs
+├── docker                              ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/docker
+├── docs                                ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/docs
 ├── encoding                            ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/encoding
 ├── ethereum                            ✅ 整个目录fork: from https://github.com/fibonacci-chain/core-protocol/tree/main/ethereum/eip712
 ├── go.mod                              🟢 依赖文件，无需审计
@@ -131,25 +131,25 @@ Developers, traders, and users can all connect to Fibonacci Chain as ecosystem p
 ├── integration_test                    🟢 测试文件，无需审计
 ├── loadtest                            🟢 测试文件，无需审计
 ├── parallelization                     🟢 测试文件，无需审计
-├── proto                               ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/proto
+├── proto                               ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/proto
 ├── rpc                                 ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/rpc
-├── scripts                             ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/scripts
+├── scripts                             ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/scripts
 ├── server                              ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/server
-├── store                               ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/store
-├── sync                                ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/sync
+├── store                               ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/store
+├── sync                                ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/sync
 ├── target                              🟢 无需审计，配置文件夹
 ├── tests                               🟢 无需审计，测试文件夹
 ├── testutil                            🟢 无需审计，测试文件夹
-├── wasmbinding                         ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/wasmbinding
-└── x                                   🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x , 但部分内容修改, 添加evm模块
+├── wasmbinding                         ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/wasmbinding
+└── x                                   🟥 整个目录Fork https://github.com/sei-protocol/sei-chain/tree/3.0.4/x , 但部分内容修改, 添加evm模块
     ├── README.md                       🟢 无需审计，说明文件
-    ├── dex                             ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x/dex
+    ├── dex                             ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/x/dex
     ├── evm                             ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/x/evm
     ├── feemarket                       ✅ 整个目录fork: from https://github.com/evmos/ethermint/tree/v0.22.0/x/feemarket
-    ├── mint                            ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x/mint
-    ├── oracle                          ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x/oracle
-    ├── store                           ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x/store
-    └── tokenfactory                    ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/v2.0.46/x/tokenfactory
+    ├── mint                            ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/x/mint
+    ├── oracle                          ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/x/oracle
+    ├── store                           ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/x/store
+    └── tokenfactory                    ✅ 整个目录fork: from https://github.com/sei-protocol/sei-chain/tree/3.0.4/x/tokenfactory
 
 ```
 
